@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class AddMovieVC: UIViewController {
+class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     @IBOutlet weak var movieTitle: UITextField!
     @IBOutlet weak var imdbLink: UITextField!
@@ -16,35 +17,32 @@ class AddMovieVC: UIViewController {
     @IBOutlet weak var personalDesc: UITextField!
     @IBOutlet weak var movieImg: UIImageView!
 
+    var imagePicker: UIImagePickerController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //movieImg.layer.cornerRadius = movieImg.frame.size.width / 2
+        //movieImg.clipsToBounds = true
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        movieImg.image = image
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func onClickedAddImg(sender: AnyObject) {
-        
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     
     @IBAction func onClickedAddMovie(sender: AnyObject) {
         
     }
+
+    
 
 }

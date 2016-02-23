@@ -18,6 +18,8 @@
 		A623F0A01C7CC89200C266FC /* AddMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F09F1C7CC89200C266FC /* AddMovieVC.swift */; };
 		A623F0A21C7CC8F600C266FC /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0A11C7CC8F600C266FC /* MovieDetailVC.swift */; };
 		A623F0A41C7CCA9900C266FC /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0A31C7CCA9900C266FC /* MovieCell.swift */; };
+		A623F0A71C7CD1EB00C266FC /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0A51C7CD1EB00C266FC /* Movie+CoreDataProperties.swift */; };
+		A623F0A81C7CD1EB00C266FC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F0A61C7CD1EB00C266FC /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		A623F09F1C7CC89200C266FC /* AddMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovieVC.swift; sourceTree = "<group>"; };
 		A623F0A11C7CC8F600C266FC /* MovieDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
 		A623F0A31C7CCA9900C266FC /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		A623F0A51C7CD1EB00C266FC /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Movie+CoreDataProperties.swift"; path = "../Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A623F0A61C7CD1EB00C266FC /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = ../Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 		A623F09A1C7CB57500C266FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A623F0A51C7CD1EB00C266FC /* Movie+CoreDataProperties.swift */,
+				A623F0A61C7CD1EB00C266FC /* Movie.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -240,8 +246,10 @@
 			files = (
 				A623F0A41C7CCA9900C266FC /* MovieCell.swift in Sources */,
 				A623F07A1C7CB57000C266FC /* ViewController.swift in Sources */,
+				A623F0A81C7CD1EB00C266FC /* Movie.swift in Sources */,
 				A623F0A01C7CC89200C266FC /* AddMovieVC.swift in Sources */,
 				A623F09E1C7CB70F00C266FC /* requirements.swift in Sources */,
+				A623F0A71C7CD1EB00C266FC /* Movie+CoreDataProperties.swift in Sources */,
 				A623F0801C7CB57000C266FC /* best_movies.xcdatamodeld in Sources */,
 				A623F0A21C7CC8F600C266FC /* MovieDetailVC.swift in Sources */,
 				A623F0781C7CB57000C266FC /* AppDelegate.swift in Sources */,
