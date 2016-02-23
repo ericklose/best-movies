@@ -34,12 +34,34 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         movieImg.image = image
     }
     
-    @IBAction func onClickedAddImg(sender: AnyObject) {
+    @IBAction func onClickedAddImg(sender: AnyObject!) {
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     
-    @IBAction func onClickedAddMovie(sender: AnyObject) {
+    @IBAction func onClickedAddMovie(sender: AnyObject!) {
+        if let title = movieTitle.text where title != "" {
+            
+            let app = UIApplication.sharedApplication().delegate as! AppDelegate
+            let context = app.managedObjectContext
+            let entity = NSEntityDescription.entityForName("Movie", inManagedObjectContext: context)!
+            let movie = Movie(entity: entity, insertIntoManagedObjectContext: context)
+            movie.title = title
+            movie.imdbLink = imdbLink.text
+            movie.imdbDesc = imdbDesc.text
+            movie.personalDesc = personalDesc.text
+            movie.setMovieImage(movieImg.image!)
+            
+            context.insertObject(movie)
+            
+            do {
+                try context.save()
+            } catch {
+                print("Could not save movie")
+            }
+            
+            self.navigationController?.popViewControllerAnimated(true)
+        }
         
     }
 
