@@ -79,11 +79,11 @@
 		A623F0761C7CB57000C266FC /* best-movies */ = {
 			isa = PBXGroup;
 			children = (
+				A623F09A1C7CB57500C266FC /* Model */,
+				A623F09B1C7CB57B00C266FC /* View */,
+				A623F09C1C7CB58800C266FC /* Controller */,
 				A623F0771C7CB57000C266FC /* AppDelegate.swift */,
-				A623F0791C7CB57000C266FC /* ViewController.swift */,
-				A623F07B1C7CB57000C266FC /* Main.storyboard */,
 				A623F0811C7CB57000C266FC /* Assets.xcassets */,
-				A623F0831C7CB57000C266FC /* LaunchScreen.storyboard */,
 				A623F0861C7CB57000C266FC /* Info.plist */,
 				A623F07E1C7CB57000C266FC /* best_movies.xcdatamodeld */,
 			);
@@ -97,6 +97,30 @@
 				A623F0911C7CB57000C266FC /* Info.plist */,
 			);
 			path = "best-moviesTests";
+			sourceTree = "<group>";
+		};
+		A623F09A1C7CB57500C266FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A623F09B1C7CB57B00C266FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A623F07B1C7CB57000C266FC /* Main.storyboard */,
+				A623F0831C7CB57000C266FC /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A623F09C1C7CB58800C266FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A623F0791C7CB57000C266FC /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
