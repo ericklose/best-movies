@@ -66,6 +66,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.reloadData()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Detail" {
+            if let cell = sender as? MovieCell, row = tableView.indexPathForCell(cell)?.row, vc = segue.destinationViewController as? MovieDetailVC {
+                vc.movies = movies[row]
+            }
+        }
+    }
 
 }
 

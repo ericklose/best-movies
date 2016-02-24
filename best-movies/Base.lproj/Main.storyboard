@@ -84,7 +84,7 @@
                                             <outlet property="movieImg" destination="ZSK-6a-vFm" id="ZzB-3G-sbu"/>
                                             <outlet property="movieTitle" destination="QFJ-c8-q0M" id="OGU-Au-UFg"/>
                                             <outlet property="personalDesc" destination="CWc-We-S29" id="BOp-l9-1x9"/>
-                                            <segue destination="Qq8-TM-R7K" kind="show" id="MSj-bw-39w"/>
+                                            <segue destination="Qq8-TM-R7K" kind="show" identifier="Detail" id="MSj-bw-39w"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -16,34 +16,24 @@ class MovieDetailVC: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var imdbDesc: UILabel!
     @IBOutlet weak var personalDesc: UILabel!
     @IBOutlet weak var movieImg: UIImageView!
-  
-        var movies = [Movie]()
-
+    
+    var movies: Movie?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context = app.managedObjectContext
-        let entity = NSEntityDescription.entityForName("Movie", inManagedObjectContext: context)!
-        let movie = Movie(entity: entity, insertIntoManagedObjectContext: context)
-        let fetchRequest = NSFetchRequest(entityName: "Movie")
         
-        movieTitle.text = movie.title
-        movieImg.image = movie.getMovieImg()
-        imdbLink.text = movie.imdbLink
-        personalDesc.text = movie.personalDesc
-        imdbDesc.text = movie.imdbDesc
-
-        
-        do {
-            let results = try context.executeFetchRequest(fetchRequest)
-            self.movies = results as! [Movie]
-        } catch let err as NSError {
-            print(err.debugDescription)
+        if let theMovie = movies {
+            self.navigationItem.title = movies?.title
+            movieTitle.text = theMovie.title
+            movieImg.image = theMovie.getMovieImg()
+            imdbDesc.text = theMovie.imdbDesc
+            personalDesc.text = theMovie.personalDesc
         }
         
+        
+        
     }
-
-
-
+    
+    
+    
 }
