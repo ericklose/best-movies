@@ -23,7 +23,7 @@ class MovieDetailVC: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         
         if let theMovie = movies {
-            self.navigationItem.title = movies?.title
+            //self.navigationItem.title = movies?.title
             movieTitle.text = theMovie.title
             movieImg.image = theMovie.getMovieImg()
             imdbDesc.text = theMovie.imdbDesc
